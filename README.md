@@ -61,9 +61,9 @@ print(accuracy_summary)
 
 ## Cohort Spatial Domains
 
-For multi-sample methods that require the number of spatial domains to be specified *a priori*, please refer to the following expected domain counts for each cohort:
+For multi-sample methods that require the number of spatial domains to be prespecified, please refer to the following spatial domain counts for each cohort:
 
-| Cohort | Expected Spatial Domains |
+| Cohort | Spatial Domains |
 | :--- | :--- |
 | `BC_10x` | 6 |
 | `BC_HER2+_ST` | 4 |
@@ -73,5 +73,5 @@ For multi-sample methods that require the number of spatial domains to be specif
 | `DLPFC_10x` | 7 |
 | `KC_TLS_10x` | 3 |
 | `LC_TLS_10x` | 3 |
-| `MOB_ST` | 3 |
+| `MOB_ST` | 5 |
 | `RCC_TLS_10x` | 3 |
