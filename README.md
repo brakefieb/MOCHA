@@ -1,41 +1,31 @@
-# MOCHA
-
 ## Evaluation Results Data Format
 
-To ensure seamless interoperability between Python and R, and to handle large-scale spatial transcriptomics data efficiently, this pipeline outputs evaluation results using **Apache Parquet (`.parquet`)**. 
-
-Parquet is a heavily compressed, columnar storage format that preserves data types and reads in fractions of a second in both languages. The results are split into two clean, relational "tidy" tables:
+This pipeline outputs evaluation results using **Apache Parquet (`.parquet`)**. 
 
 ### 1. Predictions Table (`predictions.parquet`)
-This table stores the spot-level clustering/classification results for downstream metric calculations (e.g., ARI, NMI, accuracy). 
+This table stores the spot-level clustering/classification results for downstream metric calculations (e.g., ARI, spARI). 
 
 | Column Name | Data Type | Description | Example |
 | :--- | :--- | :--- | :--- |
-| `cohort` | String | The dataset identifier. | `"DLPFC"` |
-| `tissue` | String | The specific tissue or sample. | `"Sample_151673"` |
-| `spot_id` | String | The unique barcode/name of the spot. | `"AAACAAGTATCTCCCA-1"` |
-| `method` | String | The multi-sample method evaluated. | `"SpaGCN"` |
-| `true_label` | String | Pathologist annotation or ground truth. | `"Layer_1"` |
-| `predicted_label` | String | The method's output cluster/label. | `"Cluster_3"` |
-
-*(Note: `spot_id` combined with `tissue` forms a globally unique identifier for each spot across cohorts).*
+| `cohort` | String | The dataset identifier. | `"DLPFC_10x"` |
+| `sampleID` | String | The specific tissue or sample. | `"151507"` |
+| `spotID` | String | The unique barcode/name of the spot. | `"AAACAACGAATAGTTC-1"` |
+| `method` | String | The multi-sample method evaluated. | `"JADE"` |
+| `z` | String | Pathologist annotation or ground truth. | `"L1"` |
+| `z_pred` | String | The method's output cluster/label. | `"1"` |
 
 ### 2. Performance Metrics Table (`performance.parquet`)
-Because multi-sample methods process multiple tissues simultaneously, hardware metrics are recorded per *run* rather than per spot.
 
 | Column Name | Data Type | Description | Example |
 | :--- | :--- | :--- | :--- |
-| `cohort` | String | The dataset identifier. | `"DLPFC"` |
-| `method` | String | The multi-sample method evaluated. | `"SpaGCN"` |
-| `tissues_processed`| String | Comma-separated list of tissues in this run. | `"Sample_1, Sample_2"` |
-| `runtime_seconds` | Float | Total wall-clock time in seconds. | `345.67` |
-| `memory_peak_mb` | Float | Peak RAM usage in Megabytes. | `8042.5` |
+| `cohort` | String | The dataset identifier. | `"DLPFC_10x"` |
+| `method` | String | The multi-sample method evaluated. | `"JADE"` |
+| `runtime` | Float | Total wall-clock time in seconds. | `345.67` |
+| `memory` | Float | Peak RAM usage in Megabytes. | `8042.5` |
 
 ---
 
 ### Loading the Data
-
-You can easily load these results in your preferred language without needing complex spatial container objects to evaluate performance.
 
 **In Python (using `pandas`):**
 ```python
