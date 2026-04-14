@@ -56,3 +56,21 @@ accuracy_summary <- predictions %>%
 
 print(accuracy_summary)
 ```
+
+---
+
+## Cohort Spatial Domains
+
+For multi-sample methods that require the number of spatial domains to be specified *a priori*, please refer to the following expected domain counts for each cohort:
+
+| Cohort | Expected Spatial Domains |
+| :--- | :--- |
+| `BC_10x` | 6 |
+| `BC_HER2+_ST` | 4 |
+| `BC_HP_10x` | 6 |
+| `BC_TNBC_ST` | 4 |
+| `CRC_CMS_10x` | 6 |
+| `DLPFC_10x` | 7 |
+| `KLC_TLS_10x` | 3 |
+| `MOB_ST` | 3 |
+| `RCC_TLS_10x` | ? |
