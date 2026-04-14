@@ -10,6 +10,8 @@ This table stores the spot-level clustering/classification results for downstrea
 | `cohort` | String | The dataset identifier. | `"DLPFC_10x"` |
 | `sampleID` | String | The specific tissue or sample. | `"151507"` |
 | `spotID` | String | The unique barcode/name of the spot. | `"AAACAACGAATAGTTC-1"` |
+| `x` | Integer | The spatial x-coordinate of the spot. | `43` |
+| `y` | Integer | The spatial y-coordinate of the spot. | `78` |
 | `method` | String | The multi-sample method evaluated. | `"JADE"` |
 | `z` | String | Pathologist annotation or ground truth. | `"L1"` |
 | `z_pred` | String | The method's output cluster/label. | `"1"` |
@@ -36,7 +38,7 @@ predictions = pd.read_parquet("results/predictions.parquet")
 performance = pd.read_parquet("results/performance.parquet")
 
 # Example: View the true vs predicted labels for a specific method
-print(predictions[predictions['method'] == 'SpaGCN'].head())
+print(predictions[predictions['method'] == 'JADE'].head())
 ```
 
 **In R (using `arrow` and `dplyr`):**
