@@ -71,6 +71,7 @@ For multi-sample methods that require the number of spatial domains to be specif
 | `BC_TNBC_ST` | 4 |
 | `CRC_CMS_10x` | 6 |
 | `DLPFC_10x` | 7 |
-| `KLC_TLS_10x` | 3 |
+| `KC_TLS_10x` | 3 |
+| `LC_TLS_10x` | 3 |
 | `MOB_ST` | 3 |
-| `RCC_TLS_10x` | ? |
+| `RCC_TLS_10x` | 3 |
