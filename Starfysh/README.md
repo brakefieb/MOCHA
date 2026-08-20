@@ -210,4 +210,4 @@ run_metadata.json
 Alignment overlays, group checkpoints, gene signatures, loss files, and other
 optional intermediate artifacts are stored under the relevant Starfysh result
 directory when enabled by configuration.
-> **Branch layout:** This branch contains the reproducibility bundle for Starfysh only. After cloning or switching to this branch, run `cd Starfysh/MOCHA` before using the commands below. Input data and generated results are intentionally excluded.
+> **Branch layout:** This branch contains the reproducibility bundle for Starfysh only. After cloning or switching to this branch, run `cd Starfysh` before using the commands below. Input data and generated results are intentionally excluded.
