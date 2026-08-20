@@ -1,0 +1,62 @@
+cohort_name: BC_HP_10x
+has_he_image: true
+
+data_root: data/BC_HP_10x
+data_dir: data/BC_HP_10x/data
+image_dir: data/BC_HP_10x/images
+
+h5ad_glob: "*.h5ad"
+image_glob: "*"
+
+match_by_stem: true
+
+subgroup_map:
+  subject1: [GSM6592049_M2]
+  subject2: [GSM6592050_M3]
+  subject3: [GSM6592051_M4]
+  subject4: [GSM6592052_M5]
+  subject5: [GSM6592053_M6]
+  subject6: [GSM6592055_M8]
+  subject7: [GSM6592059_M13]
+  subject8: [GSM6592060_M14]
+  subject9: [GSM6592061_M15]
+  subject10: [GSM6592062_M16]
+  subject11: [GSM6592054_M7, GSM6592057_M10]
+  subject12: [GSM6592056_M9, GSM6592058_M11]
+
+spatial_alignment:
+  mode: visium_sidecar
+  fallback_mode: disable_image
+  save_overlay: true
+  visium_scale_preference: hires
+
+label_unmapped_default: Filtered
+
+label_mapping:
+  Immune: [Lymphocytes]
+
+  Stroma:
+    - Adipose tissue
+    - Fibrosis
+    - Fibrous stroma
+
+  Stroma + immune:
+    - High TILs stroma
+    - Lymphoid stroma
+
+  Normal: [Normal epithelium]
+
+  Tumor:
+    - In situ carcinoma
+    - Tumor cells
+
+  Tumor + stroma:
+    - Tumor stroma
+
+  Filtered:
+    - Artifacts
+    - Endothelial
+    - Hyperplasia
+    - Necrosis
+    - Peripheral nerve
+    - Vascular
