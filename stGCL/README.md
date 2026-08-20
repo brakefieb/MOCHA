@@ -324,4 +324,4 @@ Please cite the original stGCL work when using this integration. See the
 upstream [stGCL repository](https://github.com/RuiGaolab/stGCL) for its citation
 information and license. The vendored upstream source retains its original
 license file under `methods/stGCL/LICENSE`.
-> **Branch layout:** This branch contains the reproducibility bundle for stGCL only. After cloning or switching to this branch, run `cd stGCL/MOCHA` before using the commands below. Input data and generated results are intentionally excluded.
+> **Branch layout:** This branch contains the reproducibility bundle for stGCL only. After cloning or switching to this branch, run `cd stGCL` before using the commands below. Input data and generated results are intentionally excluded.
