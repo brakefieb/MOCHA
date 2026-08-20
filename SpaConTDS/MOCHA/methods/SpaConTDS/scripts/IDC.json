@@ -1,0 +1,13 @@
+{
+    "dataset": "IDC",
+    "dataset_dir": "./dataset/IDC",
+    "img_dir": "./dataset/IDC/V1_Human_Invasive_Ductal_Carcinoma_image.tif",
+    "is_10x": "False",
+    "save_dir": "./output/IDC/",
+    "valid_cluster": "5",
+    "pseudo_cluster": "5",
+    "countfile_name": "V1_Human_Invasive_Ductal_Carcinoma_filtered_feature_bc_matrix.h5",
+    "num_epochs": "10",
+    "device": "cuda:0",
+    "slice_name": ""
+}

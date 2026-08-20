@@ -1,0 +1,13 @@
+{
+    "dataset": "Her2st",
+    "dataset_dir": "./dataset/Her2st",
+    "img_dir": "./dataset/Her2st/ST-imgs/B/B1/BT10737_C1_HE.jpg",
+    "is_10x": "False",
+    "save_dir": "./output/Her2st/B1/",
+    "valid_cluster": "4",
+    "pseudo_cluster": "4",
+    "countfile_name": "",
+    "device": "cuda:0",
+    "num_epochs": "50",
+    "slice_name": "B1"
+}

@@ -1,0 +1,13 @@
+{
+    "dataset": "Xenium",
+    "dataset_dir": "./dataset/Xenium",
+    "img_dir": "./dataset/Xenium/processed_image.tif",
+    "is_10x": "False",
+    "save_dir": "./output/Xenium/",
+    "valid_cluster": "14",
+    "pseudo_cluster": "14",
+    "countfile_name": "",
+    "num_epochs": "26",
+    "device": "cuda:0",
+    "slice_name": ""
+}

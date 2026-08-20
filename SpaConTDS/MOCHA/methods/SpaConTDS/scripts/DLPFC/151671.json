@@ -1,0 +1,13 @@
+{
+    "dataset": "DLPFC",
+    "dataset_dir": "./dataset/DLPFC/151671",
+    "img_dir": "./dataset/DLPFC/151671_full_image.tif",
+    "is_10x": "True",
+    "save_dir": "./output/DLPFC/151671/",
+    "valid_cluster": "5",
+    "pseudo_cluster": "5",
+    "countfile_name": "151671_filtered_feature_bc_matrix.h5",
+    "num_epochs": "6",
+    "device": "cuda:0",
+    "slice_name": ""
+}
