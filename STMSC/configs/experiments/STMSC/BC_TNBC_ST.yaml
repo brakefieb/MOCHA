@@ -1,0 +1,10 @@
+method_name: STMSC
+cohort_name: BC_TNBC_ST
+overrides:
+  parameters:
+    n_domains: 4
+    data_type: ST
+notes:
+- K=4, identical to the other MOCHA spatial-domain methods.
+- Samples have no subject pairing metadata and therefore run independently.
+
