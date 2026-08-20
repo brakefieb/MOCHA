@@ -210,4 +210,4 @@ Final outputs follow the standard MOCHA layout:
 - `results/SpaConTDS/<cohort>/run_metadata.json`
 - `results/SpaConTDS/<cohort>/stdout.log`
 - `results/SpaConTDS/<cohort>/stderr.log`
-> **Branch layout:** This branch contains the reproducibility bundle for SpaConTDS only. After cloning or switching to this branch, run `cd SpaConTDS/MOCHA` before using the commands below. Input data and generated results are intentionally excluded.
+> **Branch layout:** This branch contains the reproducibility bundle for SpaConTDS only. After cloning or switching to this branch, run `cd SpaConTDS` before using the commands below. Input data and generated results are intentionally excluded.
