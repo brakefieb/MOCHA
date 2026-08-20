@@ -1,0 +1,43 @@
+cohort_name: BC_TNBC_ST
+has_he_image: true
+
+data_root: data/BC_TNBC_ST
+data_dir: data/BC_TNBC_ST/data
+image_dir: data/BC_TNBC_ST/images
+
+h5ad_glob: "*.h5ad"
+image_glob: "*"
+
+match_by_stem: true
+
+spatial_alignment:
+  mode: direct
+  fallback_mode: disable_image
+  save_overlay: true
+
+label_unmapped_default: Filtered
+
+label_mapping:
+  Immune:
+    - Lymphocyte
+    - Lymphoid nodule
+
+  Stroma:
+    - Acellular stroma
+    - Fat tissue
+    - Stroma cell
+
+  Stroma + immune:
+    - High TIL stroma
+    - Low TIL stroma
+
+  Tumor: [Tumor]
+
+  Filtered:
+    - Heterologous elements
+    - In situ
+    - Lactiferous duct
+    - Necrosis
+    - Nerve
+    - Tumor region
+    - Vessels

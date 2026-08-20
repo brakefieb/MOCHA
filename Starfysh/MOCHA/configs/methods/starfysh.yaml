@@ -1,0 +1,46 @@
+method_name: Starfysh
+runner: run_starfysh
+
+runtime:
+  level: cohort
+  language: python
+  requires_image: optional
+  integration_scope: cohort
+  seed: 0
+  use_gpu: true
+  n_repeats: 3
+  epochs: 100
+  batch_size: 32
+  lr: 0.0001
+
+parameters:
+  n_domains: auto
+  use_image: auto
+  signature_strategy: archetypes
+  fallback_to_marker_signatures: true
+  n_top_genes: 2000
+  mt_thld: 100
+  n_markers: 30
+  n_anchors: null
+  window_size: 1
+  signif_level: 3
+  alpha_mul: 50
+  archetype_r: 100
+  archetype_cn: 30
+  archetype_n_iters: 20
+  archetype_converge: 0.001
+  kmeans_n_init: 20
+  cluster_key: starfysh_kmeans
+  verbose: true
+
+outputs:
+  predictions_file: predictions.csv
+  performance_file: performance.csv
+  save_group_predictions: false
+  save_sample_predictions: false
+  save_stdout_log: true
+  save_stderr_log: true
+  save_intermediate_artifacts: false
+  save_gene_signatures: true
+  save_loss: true
+  save_latent: false
