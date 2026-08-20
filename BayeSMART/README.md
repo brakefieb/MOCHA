@@ -119,4 +119,4 @@ figures/<sample>_true_vs_pred.png
 
 Optional posterior and intermediate artifacts are controlled by the `outputs`
 section of `configs/methods/bayesmart.yaml`.
-> **Branch layout:** This branch contains the reproducibility bundle for BayeSMART only. After cloning or switching to this branch, run `cd BayeSMART/MOCHA` before using the commands below. Input data and generated results are intentionally excluded.
+> **Branch layout:** This branch contains the reproducibility bundle for BayeSMART only. After cloning or switching to this branch, run `cd BayeSMART` before using the commands below. Input data and generated results are intentionally excluded.
