@@ -111,4 +111,4 @@ figures/<sample>_true_vs_pred.png
 
 Alignment overlays and other optional artifacts are stored in the corresponding
 cohort result directory when enabled.
-> **Branch layout:** This branch contains the reproducibility bundle for stLearn only. After cloning or switching to this branch, run `cd stLearn/MOCHA` before using the commands below. Input data and generated results are intentionally excluded.
+> **Branch layout:** This branch contains the reproducibility bundle for stLearn only. After cloning or switching to this branch, run `cd stLearn` before using the commands below. Input data and generated results are intentionally excluded.
