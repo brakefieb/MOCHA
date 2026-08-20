@@ -238,4 +238,4 @@ Repository-specific choices:
 - very large cohorts may hit RAM limits before GPU becomes the main bottleneck
 - for large cohorts, inspect `stdout.log`, `stderr.log`, and `run_metadata.json`
   together when diagnosing failures
-> **Branch layout:** This branch contains the reproducibility bundle for DeepST only. After cloning or switching to this branch, run `cd DeepST/MOCHA` before using the commands below. Input data and generated results are intentionally excluded.
+> **Branch layout:** This branch contains the reproducibility bundle for DeepST only. After cloning or switching to this branch, run `cd DeepST` before using the commands below. Input data and generated results are intentionally excluded.
