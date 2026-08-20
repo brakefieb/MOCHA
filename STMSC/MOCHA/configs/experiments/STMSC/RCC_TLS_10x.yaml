@@ -1,0 +1,9 @@
+method_name: STMSC
+cohort_name: RCC_TLS_10x
+overrides:
+  parameters:
+    n_domains: 3
+notes:
+- K=3, identical to the other MOCHA spatial-domain methods.
+- Subject 22 paired sections integrate; other subjects run independently.
+

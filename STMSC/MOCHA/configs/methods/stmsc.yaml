@@ -1,0 +1,55 @@
+method_name: STMSC
+runner: run_stmsc
+
+runtime:
+  level: cohort
+  language: python
+  requires_image: optional
+  integration_scope: subgroup_or_sample
+  seed: 2024
+  device: auto
+  mapping_epochs: 5000
+  epochs: 5000
+  learning_rate: 0.01
+
+parameters:
+  n_domains: auto
+  use_histology: auto
+  image_patch_size: 49
+  histology_alpha: 1.0
+  alignment_method: icp
+  alignment_tolerance: 0.01
+  test_all_angles: false
+  data_type: auto
+  slice_distance_microns: 10.0
+  c2c_dist: 100.0
+  rad_coef: 1.1
+  prune_graph_cos: false
+  cos_threshold: 0.5
+
+  # Released STMSC preprocess requires a labelled scRNA reference. The ten
+  # MOCHA cohorts do not share one, so a label-free pseudo-reference is used
+  # only for upstream HVG selection. Ground-truth annotations are never used.
+  pseudo_reference_types: 8
+  pseudo_reference_max_spots: 4000
+  n_hvg_group: 500
+
+  lam: 7.0
+  bl: 0.1
+  bll: 0.1
+  combined_graph_radius: auto
+  combined_radius_coef: 1.5
+  max_dense_spots: 18000
+  cluster_method: gaussian_mixture
+  gmm_covariance_type: tied
+  gmm_n_init: 10
+  gmm_reg_covar: 0.00001
+  standardize_latent_for_clustering: true
+  fallback_to_kmeans: true
+
+outputs:
+  resume_from_checkpoints: true
+  save_embedding: false
+  save_mapping_matrix: false
+  save_stdout_log: true
+  save_stderr_log: true

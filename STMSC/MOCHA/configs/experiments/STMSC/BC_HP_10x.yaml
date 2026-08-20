@@ -1,0 +1,9 @@
+method_name: STMSC
+cohort_name: BC_HP_10x
+overrides:
+  parameters:
+    n_domains: 6
+notes:
+- K=6, identical to the other MOCHA spatial-domain methods.
+- Subject 11 and 12 paired slices integrate by subgroup; other subjects run singly.
+

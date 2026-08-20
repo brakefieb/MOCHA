@@ -1,0 +1,13 @@
+method_name: STMSC
+cohort_name: BC_HER2+_ST
+overrides:
+  parameters:
+    n_domains: 4
+    data_type: ST
+    lam: 9.0
+    bl: 0.2
+    bll: 0.1
+notes:
+- K=4, identical to the other MOCHA spatial-domain methods.
+- lam/bl/bll follow the upstream Human HER2 breast cancer recommendation.
+
