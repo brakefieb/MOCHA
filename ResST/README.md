@@ -284,4 +284,4 @@ Repository-specific choices:
 - if image-feature extraction failed in an earlier run and cached
   `resst_enhanced.h5ad` files were written, delete those cached files before
   rerunning if the goal is to regenerate image-aware features
-> **Branch layout:** This branch contains the reproducibility bundle for ResST only. After cloning or switching to this branch, run `cd ResST/MOCHA` before using the commands below. Input data and generated results are intentionally excluded.
+> **Branch layout:** This branch contains the reproducibility bundle for ResST only. After cloning or switching to this branch, run `cd ResST` before using the commands below. Input data and generated results are intentionally excluded.
