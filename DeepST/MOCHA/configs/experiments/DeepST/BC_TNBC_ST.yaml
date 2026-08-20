@@ -1,0 +1,9 @@
+method_name: DeepST
+cohort_name: BC_TNBC_ST
+overrides:
+  parameters:
+    n_domains: 4
+    dec_cluster_n: 4
+    shape: square
+notes:
+- ST cohorts use square-neighborhood refinement.
