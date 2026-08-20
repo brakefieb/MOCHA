@@ -301,4 +301,4 @@ STMSC is developed by the authors of:
 
 See the [upstream STMSC repository](https://github.com/bliulab/STMSC) for the
 original implementation, installation requirements, tutorials, and license.
-> **Branch layout:** This branch contains the reproducibility bundle for STMSC only. After cloning or switching to this branch, run `cd STMSC/MOCHA` before using the commands below. Input data and generated results are intentionally excluded.
+> **Branch layout:** This branch contains the reproducibility bundle for STMSC only. After cloning or switching to this branch, run `cd STMSC` before using the commands below. Input data and generated results are intentionally excluded.
