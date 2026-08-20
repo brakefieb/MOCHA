@@ -1,0 +1,6 @@
+method_name: stGCL
+cohort_name: DLPFC_10x
+overrides:
+  parameters:
+    n_domains: 7
+
