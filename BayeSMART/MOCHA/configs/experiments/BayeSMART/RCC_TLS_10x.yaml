@@ -1,0 +1,18 @@
+method_name: BayeSMART
+cohort_name: RCC_TLS_10x
+overrides:
+  runtime:
+    level: cohort
+    integration_scope: subgroup
+  parameters:
+    k: 3
+    w: 0.1
+    n_neighbor: 6
+  preprocessing:
+    gene_select: sparkx
+    n_gene: 2000
+    pcn: 3
+notes:
+- Integrate within subject-level groups so subject 22 uses its paired FFPE and
+  frozen sections together while the remaining subjects stay independent.
+- Keep BayeSMART preprocessing and model settings consistent with the original method.
