@@ -1,0 +1,6 @@
+method_name: stGCL
+cohort_name: BC_HP_10x
+overrides:
+  parameters:
+    n_domains: 6
+

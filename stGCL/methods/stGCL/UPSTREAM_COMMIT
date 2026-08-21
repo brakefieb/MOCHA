@@ -1,0 +1,7 @@
+Repository: https://github.com/RuiGaolab/stGCL
+Commit: af82e27e93b93297acd19bd747f0d872256a86c3
+Downloaded: 2026-07-14
+
+MOCHA compatibility patch:
+- stGCL/modules.py accepts a torch device and no longer hard-codes CUDA.
+

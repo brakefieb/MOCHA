@@ -1,0 +1,48 @@
+cohort_name: RCC_TLS_10x
+has_he_image: true
+
+data_root: data/RCC_TLS_10x
+data_dir: data/RCC_TLS_10x/data
+image_dir: data/RCC_TLS_10x/images
+
+h5ad_glob: "*.h5ad"
+image_glob: "*"
+
+match_by_stem: true
+
+subgroup_map:
+  subject1: [GSM5924042_frozen_a_1]
+  subject2: [GSM5924043_frozen_a_3]
+  subject3: [GSM5924044_frozen_a_15]
+  subject4: [GSM5924045_frozen_a_17]
+  subject5: [GSM5924046_frozen_b_1]
+  subject6: [GSM5924047_frozen_b_7]
+  subject7: [GSM5924048_frozen_b_13]
+  subject8: [GSM5924049_frozen_b_18]
+  subject9: [GSM5924031_ffpe_c_3]
+  subject10: [GSM5924032_ffpe_c_4]
+  subject11: [GSM5924051_frozen_c_5]
+  subject12: [GSM5924033_ffpe_c_7]
+  subject13: [GSM5924035_ffpe_c_20]
+  subject14: [GSM5924036_ffpe_c_21]
+  subject15: [GSM5924052_frozen_c_23]
+  subject16: [GSM5924037_ffpe_c_34]
+  subject17: [GSM5924038_ffpe_c_36]
+  subject18: [GSM5924039_ffpe_c_39]
+  subject19: [GSM5924040_ffpe_c_45]
+  subject20: [GSM5924041_ffpe_c_51]
+  subject21: [GSM5924053_frozen_c_57]
+  subject22: [GSM5924030_ffpe_c_2, GSM5924050_frozen_c_2]
+
+spatial_alignment:
+  mode: visium_sidecar
+  fallback_mode: disable_image
+  save_overlay: true
+  visium_scale_preference: hires
+
+label_mapping:
+  TLS: [TLS]
+
+  No TIL: [No TLS]
+
+  nan: [nan]
