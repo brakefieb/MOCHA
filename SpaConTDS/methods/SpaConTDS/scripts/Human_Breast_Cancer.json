@@ -1,0 +1,13 @@
+{
+    "dataset": "breast_cancer",
+    "dataset_dir": "./dataset/breast_cancer",
+    "img_dir": "./dataset/breast_cancer/tissue_full_image.tif",
+    "is_10x": "False",
+    "save_dir": "./output/breast_cancer/",
+    "valid_cluster": "20",
+    "pseudo_cluster": "20",
+    "countfile_name": "filtered_feature_bc_matrix.h5",
+    "num_epochs": "20",
+    "device": "cuda:0",
+    "slice_name": ""
+}

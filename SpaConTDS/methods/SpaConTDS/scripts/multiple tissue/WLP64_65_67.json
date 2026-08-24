@@ -1,0 +1,12 @@
+{
+    "dataset": "WLP64_65_67",
+    "img_dir": "./dataset/WLP64_65_67/tissue_combined_3_images.tif",
+    "is_10x": "False",
+    "save_dir": "./output/WLP64_65_67/",
+    "valid_cluster": "10",
+    "pseudo_cluster": "10",
+    "countfile_name": "WLP64_65_67",
+    "num_epochs": "16",
+    "device": "cuda:0",
+    "slice_name": ""
+}

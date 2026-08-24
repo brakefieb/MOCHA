@@ -1,0 +1,9 @@
+method_name: SpaConTDS
+cohort_name: LC_TLS_10x
+overrides:
+  parameters:
+    n_domains: 3
+    k: 3
+notes:
+- Use the same K as the other MOCHA benchmark methods for LC_TLS_10x.
+- Keep SpaConTDS demo defaults unless explicitly overridden here.
