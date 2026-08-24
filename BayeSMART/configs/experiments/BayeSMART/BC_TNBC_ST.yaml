@@ -1,0 +1,18 @@
+method_name: BayeSMART
+cohort_name: BC_TNBC_ST
+overrides:
+  runtime:
+    level: cohort
+  parameters:
+    k: 4
+    w: 0.1
+    n_neighbor: 6
+  preprocessing:
+    gene_select: sparkx
+    n_gene: 2000
+    pcn: 3
+notes:
+- Run all samples in the cohort together for Harmony-based batch removal.
+- This cohort has many samples; request more memory than DLPFC_10x if running all
+  samples together.
+- Keep BayeSMART preprocessing and model settings consistent with the original method.
