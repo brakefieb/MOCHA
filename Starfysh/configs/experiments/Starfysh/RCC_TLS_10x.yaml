@@ -1,0 +1,10 @@
+method_name: Starfysh
+cohort_name: RCC_TLS_10x
+overrides:
+  runtime:
+    integration_scope: subgroup
+  parameters:
+    n_domains: 3
+notes:
+- Match the K used by BayeSMART/DeepST/stLearn for this cohort.
+- Integrate within subject-level groups for the paired FFPE/frozen case.
