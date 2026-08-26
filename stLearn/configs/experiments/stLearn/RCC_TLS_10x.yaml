@@ -1,0 +1,7 @@
+method_name: stLearn
+cohort_name: RCC_TLS_10x
+overrides:
+  parameters:
+    n_domains: 3
+notes:
+- Run stLearn independently on each section and aggregate at cohort level.

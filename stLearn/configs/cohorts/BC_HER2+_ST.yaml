@@ -1,0 +1,31 @@
+cohort_name: BC_HER2+_ST
+has_he_image: true
+
+data_root: data/BC_HER2+_ST
+data_dir: data/BC_HER2+_ST/data
+image_dir: data/BC_HER2+_ST/images
+
+h5ad_glob: "*.h5ad"
+image_glob: "*"
+
+match_by_stem: true
+
+spatial_alignment:
+  mode: direct
+  fallback_mode: disable_image
+  save_overlay: true
+
+label_unmapped_default: Filtered
+
+label_mapping:
+  Immune: [immune infiltrate]
+
+  Stroma:
+    - adipose tissue
+    - connective tissue
+
+  Normal: [breast glands]
+
+  Tumor:
+    - in situ cancer
+    - invasive cancer

@@ -1,0 +1,7 @@
+method_name: stLearn
+cohort_name: BC_TNBC_ST
+overrides:
+  parameters:
+    n_domains: 4
+notes:
+- Run stLearn per sample and aggregate cohort outputs.
