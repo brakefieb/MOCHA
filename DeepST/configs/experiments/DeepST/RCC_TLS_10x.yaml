@@ -1,0 +1,13 @@
+method_name: DeepST
+cohort_name: RCC_TLS_10x
+overrides:
+  runtime:
+    integration_scope: subgroup
+  parameters:
+    n_domains: 3
+    dec_cluster_n: 3
+    shape: hexagon
+notes:
+- Use Visium-like hexagon refinement unless the cohort metadata says otherwise.
+- Integrate within subject-level groups so subject 22 uses its paired FFPE and
+  frozen sections together while the remaining subjects stay independent.

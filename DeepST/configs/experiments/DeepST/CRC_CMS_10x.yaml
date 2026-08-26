@@ -1,0 +1,13 @@
+method_name: DeepST
+cohort_name: CRC_CMS_10x
+overrides:
+  runtime:
+    integration_scope: subgroup
+  parameters:
+    n_domains: 6
+    dec_cluster_n: 6
+    shape: hexagon
+notes:
+- Use Visium-like hexagon refinement unless the cohort metadata says otherwise.
+- Integrate paired Rep1/Rep2 sections within each subject instead of merging all
+  14 sections into one cohort-wide DeepST graph.

@@ -1,0 +1,9 @@
+method_name: DeepST
+cohort_name: MOB_ST
+overrides:
+  parameters:
+    n_domains: 5
+    dec_cluster_n: 5
+    shape: square
+notes:
+- ST cohorts use square-neighborhood refinement.

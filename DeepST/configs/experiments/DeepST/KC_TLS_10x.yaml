@@ -1,0 +1,9 @@
+method_name: DeepST
+cohort_name: KC_TLS_10x
+overrides:
+  parameters:
+    n_domains: 3
+    dec_cluster_n: 3
+    shape: hexagon
+notes:
+- Use Visium-like hexagon refinement unless the cohort metadata says otherwise.
