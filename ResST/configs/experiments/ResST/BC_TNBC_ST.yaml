@@ -1,0 +1,11 @@
+method_name: ResST
+cohort_name: BC_TNBC_ST
+overrides:
+  runtime:
+    integration_scope: sample
+  parameters:
+    n_domains: 4
+    refine_shape: square
+notes:
+- Run this 94-WSI cohort as sample-level ResST jobs so completed WSI outputs
+  checkpoint under the 48-hour Juno wall-time limit.
