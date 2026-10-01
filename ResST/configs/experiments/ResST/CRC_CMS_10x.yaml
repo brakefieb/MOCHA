@@ -1,0 +1,9 @@
+method_name: ResST
+cohort_name: CRC_CMS_10x
+overrides:
+  runtime:
+    integration_scope: subgroup
+  parameters:
+    n_domains: 6
+notes:
+- Keep K aligned with the existing methods for this cohort.

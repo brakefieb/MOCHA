@@ -1,0 +1,58 @@
+method_name: ResST
+runner: run_resst
+
+runtime:
+  level: cohort
+  language: python
+  requires_image: optional
+  integration_scope: cohort
+  seed: 0
+  use_gpu: true
+  pre_epochs: 1000
+  epochs: 500
+
+parameters:
+  n_domains: auto
+  platform: auto
+  use_morphology: auto
+  adjacent_weight: 0.3
+  neighbour_k: 4
+  spatial_k: 30
+  cnn_type: ResNet50
+  image_pca_n_comps: 200
+  enhance_feature: true
+  min_cells: 3
+  pca_n_comps: 50
+  linear_encoder_hidden: [32, 20]
+  linear_decoder_hidden: [32, 60]
+  conv_hidden: [32, 8]
+  p_drop: 0.01
+  dec_cluster_n: 20
+  lr: 0.0005
+  weight_decay: 0.0001
+  grad_down: 5
+  store_model: true
+  use_model: false
+  graph_dist_type: BallTree
+  graph_k: 12
+  rad_cutoff: 150
+  cluster_neighbors: 15
+  cluster_type: leiden
+  cluster_increment: 0.01
+  cluster_key: pred
+  refined_key: refine_pred
+  refine_shape: hexagon
+
+outputs:
+  predictions_file: predictions.csv
+  performance_file: performance.csv
+  checkpoint_predictions_file: checkpoint_predictions.csv
+  resume_from_checkpoints: true
+  save_sample_cache: true
+  save_group_predictions: false
+  save_sample_predictions: true
+  save_stdout_log: true
+  save_stderr_log: true
+  save_intermediate_artifacts: false
+  save_model: false
+  save_adata: false

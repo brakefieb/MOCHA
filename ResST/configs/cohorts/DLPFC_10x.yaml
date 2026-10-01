@@ -1,0 +1,41 @@
+cohort_name: DLPFC_10x
+has_he_image: true
+
+data_root: data/DLPFC_10x
+data_dir: data/DLPFC_10x/data
+image_dir: data/DLPFC_10x/images
+
+h5ad_glob: "SCE_*.h5ad"
+image_glob: "HE_*.png"
+
+# Exact stem matching would fail for SCE_151507 vs HE_151507.
+# The modified loader will still match by numeric sample ID.
+match_by_stem: false
+
+spatial_alignment:
+  mode: visium_sidecar
+  fallback_mode: disable_image
+  save_overlay: true
+  visium_scale_preference: hires
+
+# Official DLPFC grouping used to restrict cross-slice edges
+# to adjacent sections within the same donor group.
+subgroup_map:
+  p1: [151507, 151508, 151509, 151510]
+  p2: [151669, 151670, 151671, 151672]
+  p3: [151673, 151674, 151675, 151676]
+
+label_mapping:
+  L1: [L1]
+
+  L2: [L2]
+
+  L3: [L3]
+
+  L4: [L4]
+
+  L5: [L5]
+
+  L6: [L6]
+
+  WM: [WM]

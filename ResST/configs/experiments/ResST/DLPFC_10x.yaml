@@ -1,0 +1,9 @@
+method_name: ResST
+cohort_name: DLPFC_10x
+overrides:
+  runtime:
+    integration_scope: subgroup
+  parameters:
+    n_domains: 7
+notes:
+- Integrate within DLPFC donor subgroups, matching the existing multi-sample benchmark setup.

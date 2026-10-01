@@ -1,0 +1,89 @@
+cohort_name: BC_10x
+has_he_image: true
+
+data_root: data/BC_10x
+data_dir: data/BC_10x/data
+image_dir: data/BC_10x/images
+
+h5ad_glob: "*.h5ad"
+image_glob: "*"
+
+match_by_stem: true
+
+spatial_alignment:
+  mode: visium_sidecar
+  fallback_mode: disable_image
+  save_overlay: true
+  visium_scale_preference: hires
+
+# These sidecar files are Visium spot-level spatial/annotation metadata, not
+# HER2-style cell-level image profiles. They are recorded for provenance, but
+# BayeSMART will still use STdeconvolve for V until a cell-level table with
+# cell coordinates and cell types is configured with mode: cell_abundance.
+image_profile:
+  mode: spot_metadata
+  root_dir: data/BC_10x/images
+
+  spot_metadata:
+    glob: "{sample_id}_metadata.csv"
+
+  tissue_positions:
+    glob: "{sample_id}_tissue_positions_list.csv"
+    header: false
+    columns:
+      barcode: 1
+      in_tissue: 2
+      array_row: 3
+      array_col: 4
+      pxl_row_in_fullres: 5
+      pxl_col_in_fullres: 6
+
+  scalefactors:
+    glob: "{sample_id}_scalefactors_json.json"
+
+  # To enable the official HER2-style image profile later, change mode to
+  # cell_abundance and fill this section with a table containing one row per
+  # segmented cell, with x/y coordinates and a cell type/name column.
+  # Example:
+  # cell_metadata:
+  #   glob: "{sample_id}_cell_metadata.csv"
+  #   required: true
+  #   columns:
+  #     x: x
+  #     y: y
+  #     cell_type: name
+  cell_metadata: {}
+
+label_unmapped_default: Filtered
+
+label_mapping:
+  Immune: [Lymphocytes]
+
+  Tumor:
+    - DCIS
+    - Invasive cancer
+
+  Stroma:
+    - Adipose tissue
+    - Stroma
+    - Stroma + adipose tissue
+
+  Tumor + immune:
+    - Invasive cancer + lymphocytes
+
+  Tumor + stroma:
+    - Invasive cancer + stroma
+
+  Tumor + stroma + immune:
+    - Invasive cancer + stroma + lymphocytes
+
+  Filtered:
+    - Artifact
+    - Cancer trapped in lymphocyte aggregation
+    - Invasive cancer + adipose tissue + lymphocytes
+    - Normal duct
+    - Normal glands + lymphocytes
+    - Normal + stroma + lymphocytes
+    - Necrosis
+    - TLS
+    - Uncertain

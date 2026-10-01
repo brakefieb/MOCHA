@@ -1,0 +1,5 @@
+method_name: ResST
+cohort_name: KC_TLS_10x
+overrides:
+  parameters:
+    n_domains: 3
