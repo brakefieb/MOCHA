@@ -1,0 +1,28 @@
+cohort_name: MOB_ST
+has_he_image: true
+
+data_root: data/MOB_ST
+data_dir: data/MOB_ST/data
+image_dir: data/MOB_ST/images
+
+h5ad_glob: "*.h5ad"
+image_glob: "*"
+
+match_by_stem: true
+
+spatial_alignment:
+  mode: st_transform_matrix
+  fallback_mode: disable_image
+  save_overlay: true
+  transform_matrix_glob: "{sample_id}_st_transform_matrix.txt"
+
+label_mapping:
+  GCL: [GCL]
+
+  GL: [GL]
+
+  MCL: [MCL]
+
+  ONL: [ONL]
+
+  OPL: [OPL]

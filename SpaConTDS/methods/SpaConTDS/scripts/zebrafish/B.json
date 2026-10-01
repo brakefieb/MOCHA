@@ -1,0 +1,12 @@
+{
+    "dataset": "zebrafishB",
+    "dataset_dir": "./dataset/zebrafish",
+    "img_dir": "./dataset/zebrafish/GSM4838132_Visium_B_image.tif",
+    "is_10x": "False",
+    "save_dir": "./output/zebrafish/B/",
+    "valid_cluster": "13",
+    "pseudo_cluster": "13",
+    "countfile_name": "B_filtered_feature_bc_matrix.h5",
+    "device": "cuda:0",
+    "slice_name": "B"
+}

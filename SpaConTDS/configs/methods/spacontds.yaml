@@ -1,0 +1,56 @@
+method_name: SpaConTDS
+runner: run_spacontds
+
+runtime:
+  level: cohort
+  language: python
+  requires_image: true
+  seed: 42
+  device: auto
+  num_epochs: 50
+
+parameters:
+  n_domains: auto
+  k: auto
+  patch_size: 56
+  graph_type: KNN
+  k_cutoff: 6
+  subgraph_neighbors: [6, 6]
+  gene_in_dim: 3000
+  gene_hidden_dim: 512
+  gene_out_dim: 128
+  gene_num_layers: 2
+  gene_augtype: noise
+  gene_mask_pct: 0.1
+  gene_sigma_noise: 1
+  img_sigma_noise: 50
+  neg_type: others_label
+  img_out_dim: 128
+  fc_dim: [128]
+  hidden_dim: 128
+  mlp_layers: 2
+  p: 1.0
+  p_round: 1
+  iter_epochs: 50
+  tau: 0.07
+  batch_size: 60
+  lr: 0.01
+  alpha: 1.0
+  clone: 3
+  internal: 3
+  alpha_lr: 0.25
+  reawrd_alphalr: 1
+  reawrd_emdklr: 1
+  emb_weight: 1.0
+  gene_only: false
+  img_only: false
+
+outputs:
+  predictions_file: predictions.csv
+  performance_file: performance.csv
+  save_stdout_log: true
+  save_stderr_log: true
+  resume_from_checkpoints: true
+  save_prepared_inputs: true
+  save_upstream_output: false
+  save_model_snapshots: false

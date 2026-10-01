@@ -1,0 +1,12 @@
+{
+    "dataset": "DLPFC_batch73",
+    "img_dir": "./dataset/DLPFC_7375/tissue_combined_3_images.tif",
+    "is_10x": "False",
+    "save_dir": "./output/DLPFC_batch73/",
+    "valid_cluster": "7",
+    "pseudo_cluster": "7",
+    "countfile_name": "DLPFC_7375",
+    "num_epochs": "4",
+    "device": "cuda:0",
+    "slice_name": ""
+}

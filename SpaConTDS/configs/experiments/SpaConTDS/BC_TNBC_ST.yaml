@@ -1,0 +1,9 @@
+method_name: SpaConTDS
+cohort_name: BC_TNBC_ST
+overrides:
+  parameters:
+    n_domains: 4
+    k: 4
+notes:
+- Use the same K as the other MOCHA benchmark methods for BC_TNBC_ST.
+- Keep SpaConTDS demo defaults unless explicitly overridden here.

@@ -1,0 +1,12 @@
+{
+    "dataset": "Mouse_Brain_integration",
+    "img_dir": "./dataset/Mouse_Brain_combine/tissue_full_image_combined.tif",
+    "is_10x": "False",
+    "save_dir": "./output/Mouse_Brain_combine/",
+    "valid_cluster": "26",
+    "pseudo_cluster": "26",
+    "countfile_name": "Mouse_Brain_integration",
+    "num_epochs": "2",
+    "device": "cuda:0",
+    "slice_name": ""
+}
