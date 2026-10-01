@@ -1,0 +1,35 @@
+method_name: stLearn
+runner: run_stlearn
+
+runtime:
+  level: cohort
+  language: python
+  requires_image: optional
+  seed: 1
+
+parameters:
+  n_domains: auto
+  use_morphology: auto
+  fallback_to_expression_only: true
+  filter_genes_min_cells: 1
+  pre_pca_n_comps: 50
+  post_pca_n_comps: 50
+  cnn_base: resnet50
+  morphology_n_components: 50
+  tiling_crop_size: 40
+  tiling_target_size: 299
+  tiling_image_format: JPEG
+  tiling_jpeg_quality: 75
+  sme_use_data: raw
+  sme_weights: weights_matrix_all
+  sme_platform: Visium
+  kmeans_use_data: X_pca
+  cluster_key: stlearn_kmeans
+
+outputs:
+  predictions_file: predictions.csv
+  performance_file: performance.csv
+  save_sample_predictions: false
+  save_stdout_log: true
+  save_stderr_log: true
+  save_intermediate_artifacts: false

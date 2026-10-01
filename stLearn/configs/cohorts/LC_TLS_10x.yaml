@@ -1,0 +1,30 @@
+cohort_name: LC_TLS_10x
+has_he_image: true
+
+data_root: data/KLC_TLS_10x
+data_dir: data/KLC_TLS_10x/data/L
+image_dir: data/KLC_TLS_10x/images/L
+
+h5ad_glob: "*.h5ad"
+image_glob: "*"
+
+match_by_stem: true
+
+spatial_alignment:
+  mode: visium_sidecar
+  fallback_mode: disable_image
+  save_overlay: true
+  visium_scale_preference: hires
+
+label_unmapped_default: Filtered
+
+label_mapping:
+  Immune:
+    - INFL
+    - TLS
+
+  Normal: [NOR]
+
+  Tumor: [TUM]
+
+  Filtered: [LN]

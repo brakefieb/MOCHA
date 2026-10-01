@@ -1,0 +1,8 @@
+method_name: stLearn
+cohort_name: BC_10x
+overrides:
+  parameters:
+    n_domains: 6
+notes:
+- Run stLearn per sample and aggregate cohort outputs.
+- Use morphology only when image alignment is usable; otherwise fall back to expression-only clustering.

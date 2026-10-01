@@ -1,0 +1,7 @@
+method_name: stLearn
+cohort_name: DLPFC_10x
+overrides:
+  parameters:
+    n_domains: 7
+notes:
+- Keep DLPFC cluster count aligned with the existing benchmark configuration.

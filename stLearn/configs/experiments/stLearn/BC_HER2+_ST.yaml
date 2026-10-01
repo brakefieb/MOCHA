@@ -1,0 +1,8 @@
+method_name: stLearn
+cohort_name: BC_HER2+_ST
+overrides:
+  parameters:
+    n_domains: 4
+notes:
+- Run stLearn per sample and aggregate cohort outputs.
+- ST cohorts can use image morphology only if spot coordinates align cleanly to H&E pixels.
