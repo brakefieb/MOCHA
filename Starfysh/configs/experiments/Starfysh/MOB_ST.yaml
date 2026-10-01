@@ -1,0 +1,11 @@
+method_name: Starfysh
+cohort_name: MOB_ST
+overrides:
+  runtime:
+    integration_scope: sample
+  parameters:
+    n_domains: 5
+notes:
+- Match the K used by BayeSMART/DeepST/stLearn for this cohort.
+- Run Starfysh as sample-level partial jobs and merge outputs to stay under
+  the 48-hour Juno wall-time limit.

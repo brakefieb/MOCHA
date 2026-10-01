@@ -1,0 +1,8 @@
+method_name: Starfysh
+cohort_name: KC_TLS_10x
+overrides:
+  parameters:
+    n_domains: 3
+notes:
+- Match the K used by BayeSMART/DeepST/stLearn for this cohort.
+- Run Starfysh at cohort level with reference-free archetype signatures.

@@ -1,0 +1,22 @@
+method_name: Starfysh
+cohort_name: BC_TNBC_ST
+overrides:
+  runtime:
+    integration_scope: sample
+    resume_completed_groups: true
+    n_repeats: 1
+    epochs: 40
+    batch_size: 64
+  parameters:
+    n_domains: 4
+    n_top_genes: 1000
+    archetype_r: 50
+    archetype_n_iters: 5
+    kmeans_n_init: 10
+notes:
+- Match the K used by BayeSMART/DeepST/stLearn for this cohort.
+- Run Starfysh as sample-level partial jobs and merge outputs to stay under
+  the 48-hour Juno wall-time limit for this large cohort.
+- BC_TNBC_ST has several WSI that cannot finish a single sample within 48h
+  under the default Starfysh 3x100 training schedule, so this cohort uses a
+  lighter Starfysh setting while preserving K and sample-level checkpoints.
