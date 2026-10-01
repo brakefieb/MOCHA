@@ -1,0 +1,37 @@
+method_name: BayeSMART
+runner: run_bayesmart
+
+runtime:
+  level: cohort
+  language: python_r
+  requires_image: false
+  mcmc_iter: 5000
+  store_thin: 100
+  preprocessing_workers: 4
+
+parameters:
+  k: 7
+  w: 0.1
+  n_neighbor: 6
+  f_val: 1
+
+preprocessing:
+  gene_select: sparkx
+  n_gene: 2000
+  pcn: 3
+
+image_profile:
+  mode: stdeconvolve
+
+outputs:
+  predictions_file: predictions.csv
+  performance_file: performance.csv
+  save_group_predictions: false
+  save_posterior_rds: false
+  save_posterior_z: false
+  save_trace_plot: false
+  save_mu_median: false
+  save_omega_median: false
+  save_posterior_summary: false
+  save_sample_predictions: false
+  save_intermediate: false
