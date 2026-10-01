@@ -1,0 +1,10 @@
+method_name: DeepST
+cohort_name: BC_HER2+_ST
+overrides:
+  parameters:
+    n_domains: 4
+    dec_cluster_n: 4
+    shape: square
+notes:
+- ST cohorts use square-neighborhood refinement.
+- Morphology is optional and depends on image alignment quality.

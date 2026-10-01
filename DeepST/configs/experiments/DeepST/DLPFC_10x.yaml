@@ -1,0 +1,11 @@
+method_name: DeepST
+cohort_name: DLPFC_10x
+overrides:
+  runtime:
+    integration_scope: subgroup
+  parameters:
+    n_domains: 7
+    dec_cluster_n: 7
+    shape: hexagon
+notes:
+- Follow the original DeepST multi-sample example more closely by integrating within DLPFC donor subgroups instead of across the whole cohort.

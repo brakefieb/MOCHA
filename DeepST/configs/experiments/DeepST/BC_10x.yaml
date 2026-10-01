@@ -1,0 +1,10 @@
+method_name: DeepST
+cohort_name: BC_10x
+overrides:
+  parameters:
+    n_domains: 6
+    dec_cluster_n: 6
+    shape: hexagon
+notes:
+- Run DeepST in cohort-level integration mode across all samples.
+- Enable morphology automatically when image files are present and coordinate-to-image alignment is usable.

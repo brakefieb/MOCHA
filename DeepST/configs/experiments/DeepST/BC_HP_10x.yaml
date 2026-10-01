@@ -1,0 +1,12 @@
+method_name: DeepST
+cohort_name: BC_HP_10x
+overrides:
+  runtime:
+    integration_scope: subgroup
+  parameters:
+    n_domains: 6
+    dec_cluster_n: 6
+    shape: hexagon
+notes:
+- Integrate within subject-level groups so subjects 11 and 12 keep their paired
+  sections together, while single-section subjects still run independently.

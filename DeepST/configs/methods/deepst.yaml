@@ -1,0 +1,51 @@
+method_name: DeepST
+runner: run_deepst
+
+runtime:
+  level: cohort
+  language: python
+  requires_image: optional
+  integration_scope: cohort
+  seed: 0
+  pre_epochs: 500
+  epochs: 500
+  use_gpu: true
+
+parameters:
+  n_domains: auto
+  priori: true
+  use_morphological: auto
+  cnn_type: ResNet50
+  image_pca_n_comps: 50
+  adjacent_weight: 0.3
+  neighbour_k: 4
+  spatial_k: 30
+  augment_n_components: 100
+  md_dist_type: cosine
+  gb_dist_type: correlation
+  use_data: raw
+  augment_spatial_type: KDTree
+  graph_dist_type: KDTree
+  graph_k: 12
+  rad_cutoff: 150
+  pca_n_comps: 200
+  conv_type: GATConv
+  linear_encoder_hidden: [32, 20]
+  linear_decoder_hidden: [32]
+  conv_hidden: [32, 8]
+  p_drop: 0.01
+  dec_cluster_n: 20
+  kl_weight: 1.0
+  mse_weight: 1.0
+  bce_kld_weight: 1.0
+  domain_weight: 1.0
+  shape: hexagon
+
+outputs:
+  predictions_file: predictions.csv
+  performance_file: performance.csv
+  save_group_predictions: false
+  save_sample_predictions: true
+  save_stdout_log: true
+  save_stderr_log: true
+  save_intermediate_artifacts: false
