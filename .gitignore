@@ -1,0 +1,28 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+logs/
+results/
+
+data/
+*.h5ad
+
+# Generated or downloaded method artifacts (not source code)
+methods/*/dataset/
+methods/*/data/
+methods/**/results/
+*.RData
+*.Rhistory
+
+# Keep required released model weights, but ignore training checkpoints.
+methods/SpaConTDS/model/epoch_*.pth
+methods/SpaConTDS/Decoder/epoch_*.pth
+*.ckpt
+
+# Nested upstream repository metadata
+methods/**/.git/
+
+*.pptx
+*.pdf
+~$*

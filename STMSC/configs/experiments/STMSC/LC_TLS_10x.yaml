@@ -1,0 +1,8 @@
+method_name: STMSC
+cohort_name: LC_TLS_10x
+overrides:
+  parameters:
+    n_domains: 3
+notes:
+- K=3, identical to the other MOCHA spatial-domain methods.
+

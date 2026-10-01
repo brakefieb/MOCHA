@@ -1,0 +1,9 @@
+method_name: STMSC
+cohort_name: CRC_CMS_10x
+overrides:
+  parameters:
+    n_domains: 6
+notes:
+- K=6, identical to the other MOCHA spatial-domain methods.
+- Rep1/Rep2 slices integrate within each subject subgroup.
+

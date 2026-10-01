@@ -1,0 +1,14 @@
+method_name: STMSC
+cohort_name: DLPFC_10x
+overrides:
+  parameters:
+    n_domains: 7
+    group_hyperparameters:
+      # p1 has 18,033 spots, just above the global 18,000 dense-graph guard.
+      # The supplied Slurm profile requests 360G host RAM; allow this donor only.
+      p1: {lam: 5.0, bl: 0.5, bll: 0.1, max_dense_spots: 19000}
+      p2: {lam: 1.0, bl: 0.6, bll: 0.1}
+      p3: {lam: 7.0, bl: 0.1, bll: 0.1}
+notes:
+- K=7, identical to the other MOCHA spatial-domain methods.
+- Donor grouping and p1/p2/p3 loss weights follow the upstream LIBD settings.
