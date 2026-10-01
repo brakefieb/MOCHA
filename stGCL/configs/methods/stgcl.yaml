@@ -1,0 +1,46 @@
+method_name: stGCL
+runner: run_stgcl
+
+runtime:
+  level: cohort
+  language: python
+  requires_image: optional
+  seed: 0
+  device: auto
+  image_batch_size: 64
+
+parameters:
+  n_domains: auto
+  use_image: auto
+  fallback_to_expression_only: true
+  min_cells: 3
+  top_genes: 3000
+  hvg_flavor: seurat_v3
+  target_sum: 10000
+  scale_max_value: 10
+  image_crop_size: 256
+  vit_patch_size: 64
+  image_pca_n_comps: 50
+  graph_model: KNN
+  graph_k: 6
+  rad_cutoff: 150
+  hidden_dims: [100, 30]
+  n_epochs: auto
+  contrastive_weight: 0.04
+  learning_rate: 0.001
+  gradient_clipping: 5.0
+  weight_decay: 0.0001
+  early_stop: true
+  gmm_n_init: 10
+  gmm_reg_covar: 0.000001
+  refine_neighbors: 50
+
+outputs:
+  predictions_file: predictions.csv
+  performance_file: performance.csv
+  resume_from_checkpoints: true
+  save_raw_image_features: false
+  save_embedding: false
+  save_stdout_log: true
+  save_stderr_log: true
+

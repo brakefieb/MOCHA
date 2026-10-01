@@ -1,0 +1,66 @@
+cohort_name: CRC_CMS_10x
+has_he_image: true
+
+data_root: data/CRC_CMS_10x
+data_dir: data/CRC_CMS_10x/data
+image_dir: data/CRC_CMS_10x/images
+
+h5ad_glob: "*.h5ad"
+image_glob: "*"
+
+match_by_stem: true
+
+subgroup_map:
+  subject1: [SN048_A121573_Rep1, SN048_A121573_Rep2]
+  subject2: [SN048_A416371_Rep1, SN048_A416371_Rep2]
+  subject3: [SN123_A551763_Rep1, SN124_A551763_Rep2]
+  subject4: [SN123_A595688_Rep1, SN124_A595688_Rep2]
+  subject5: [SN123_A798015_Rep1, SN124_A798015_Rep2]
+  subject6: [SN123_A938797_Rep1_X, SN124_A938797_Rep2]
+  subject7: [SN84_A120838_Rep1, SN84_A120838_Rep2]
+
+spatial_alignment:
+  mode: visium_sidecar
+  fallback_mode: disable_image
+  save_overlay: true
+  visium_scale_preference: hires
+
+label_unmapped_default: Filtered
+
+label_mapping:
+  Stroma + immune:
+    - Connective tissue 2 fibroblastic IC low
+    - Connective tissue 3 fibroblastic IC med
+    - IC aggregate connective tissue
+    - Stroma desmoplastic IC low
+    - Stroma desmoplastic IC med to high
+    - Stroma fibroblastic IC high
+    - Stroma fibroblastic IC low
+    - Stroma fibroblastic IC med
+
+  Stroma:
+    - Connective tissue 1 edema
+
+  Tumor: [Tumor]
+
+  Tumor + stroma:
+    - Tumor & stroma
+
+  Tumor + stroma + immune:
+    - Tumor & stroma IC low
+    - Tumor & stroma IC med to high
+
+  Normal:
+    - Epithelium & lam propria
+    - Epithelium & submucosa
+    - Lamina propria
+    - Non neo epithelium
+    - Submucosa
+
+  Filtered:
+    - Connective tissue 4 muscularis IC low
+    - Glandular tissue
+    - IC aggregate muscularis or stroma
+    - IC aggregate submucosa
+    - Muscularis IC med to high
+    - Squamous epithelium

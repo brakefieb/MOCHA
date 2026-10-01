@@ -1,0 +1,6 @@
+method_name: stGCL
+cohort_name: CRC_CMS_10x
+overrides:
+  parameters:
+    n_domains: 6
+
